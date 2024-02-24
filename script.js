@@ -8,3 +8,12 @@ let isError = false;
 function cleanInputString(str) {
     let strArray = str.split('');
 }
+function cleanInputString(str) {
+  const regex = /[+-\s]/g;
+  return str.replace(regex, '');
+}
+
+function isInvalidInput(str) {
+  const regex = /\d+e\d+/i;
+  return str.match(regex);
+}
